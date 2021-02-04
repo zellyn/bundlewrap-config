@@ -1,0 +1,3 @@
+# Managed by bundlewrap
+APT::Install-Recommends "true";
+APT::Install-Suggests "false";
