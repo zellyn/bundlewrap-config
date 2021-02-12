@@ -28,9 +28,15 @@ groups = {
                     ],
                 },
             },
+            'ddclient': {
+                'username': 'vO5JlDJI7xNaixYL',
+                'password': 'encrypt$gAAAAABgJuX3t4fsJpaU52il8Gye8hMSdzKs82I811q10iirsNVOfpCJ-AHG1H4JfgQzGkczX87zXY4c1swtkUBH4NBPHf_Xd6UIIz7QyIYIjEHvQh4GaA4=',
+                'domain': 'greenseptember.com',
+            },
         },
         'bundles': [
             'keepalived',
+            'ddclient',
         ],
     },
     'raspi': {
