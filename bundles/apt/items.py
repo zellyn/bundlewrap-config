@@ -21,7 +21,8 @@ files = {
     #     'content_type': 'mako',
     # },
 
-    '/etc/apt/apt.conf.d/90recommended-packages': {}
+    '/etc/apt/apt.conf.d/90recommended-packages': {},
+    '/etc/apt/apt.conf.d/51unattended-upgrades-extra': {},
 }
 
 if node.metadata.get('apt/autoupgrade', True):

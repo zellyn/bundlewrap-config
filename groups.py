@@ -16,4 +16,35 @@ groups = {
         ),
         'bundles': ["apt"]
     },
+    'katespi': {
+        'os': 'ubuntu',
+        'metadata': {
+            'apt': {
+                'repos': {
+                    'tailscale': [
+                        '# Managed by bundlewrap',
+                        '# Tailscale packages for ubuntu groovy',
+                        'deb https://pkgs.tailscale.com/stable/ubuntu groovy main',
+                    ],
+                },
+            },
+        },
+        'bundles': [
+            'keepalived',
+        ],
+    },
+    'raspi': {
+        'os': 'raspbian',
+        'metadata': {
+            'apt': {
+                'repos': {
+                    'tailscale': [
+                        '# Managed by bundlewrap',
+                        '# Tailscale packages for raspbian buster',
+                        'deb https://pkgs.tailscale.com/stable/raspbian buster main',
+                    ],
+                },
+            },
+        },
+    },
 }
