@@ -16,6 +16,7 @@ svc_systemd = {
 
 files = {
     '/etc/keepalived/keepalived.conf': {
+        'content_type': 'mako',
         'triggers': [
             'svc_systemd:keepalived.service:reload',
         ],
