@@ -8,10 +8,11 @@ I have four Raspberry Pi 4s for a Kubernetes cluster, bought with a work-provide
 The notes we're taking as we configure Raspberry Pi Kubernetes clusters are [here](https://docs.google.com/document/d/12TT49VgyPRSH7F4b_oC5rOv1Ag7RPxmSNAWbJjf3RF4).
 
 # Miscellaneous notes
-## Dumping file contents:
+
+### Dumping file contents and other general debugging
+```
 bw items katespi1
 bw items -f katespi1 file:/etc/keepalived/keepalived.conf
 bw items -f katespi1 file:/etc/systemd/system/k3s.service
-
-## bw general debugging
 bw debug -c 'print(repo.vault.password_for("foobarbaz"))'
+```
