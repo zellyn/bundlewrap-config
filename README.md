@@ -16,3 +16,9 @@ bw items -f katespi1 file:/etc/keepalived/keepalived.conf
 bw items -f katespi1 file:/etc/systemd/system/k3s.service
 bw debug -c 'print(repo.vault.password_for("foobarbaz"))'
 ```
+
+## Accessing your cluster with kubectl
+
+Copy the cluster, context, and user from `/etc/rancher/k3s/k3s.yaml` on the
+control-plane server into the relevant sections of `~/.kube/config`, renaming
+`default` to `katespi` (or whatever you want) everywhere.
