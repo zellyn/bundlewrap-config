@@ -12,5 +12,5 @@ version_url="${INSTALL_K3S_CHANNEL_URL}/${INSTALL_K3S_CHANNEL}"
 VERSION_K3S=$(curl -w '%{url_effective}' -L -s -S ${version_url} -o /dev/null | sed -e 's|.*/||')
 BIN_URL=${GITHUB_URL}/download/${VERSION_K3S}/k3s${SUFFIX}
 echo "Downloading $BIN_URL"
-curl -o bin/k3s${SUFFIX} -sfL $BIN_URL
-# wget -qO bin/k3s${SUFFIX} $BIN_URL
+curl -o bundles/k3s/files/k3s -sfL $BIN_URL
+# wget -qO bundles/k3s/files/k3s $BIN_URL
