@@ -16,6 +16,16 @@ groups = {
         ),
         'bundles': ["apt"]
     },
+    'k3s': {
+        'metadata': {
+            'k3s': {
+                'server': False,
+            }
+        },
+        'bundles': [
+            'k3s',
+        ],
+    },
     'katespi': {
         'os': 'ubuntu',
         'metadata': {
