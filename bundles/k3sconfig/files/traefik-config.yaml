@@ -1,0 +1,29 @@
+# This file is managed by bundlewrap.
+# It appends config to the traefik helm chart and is automatically applied by k3s.
+# The mechanism of customizing rather than changing existing Helm config is
+# explained here: https://rancher.com/docs/k3s/latest/en/helm/#customizing-packaged-components-with-helmchartconfig
+# The particulars of this configuration change come from step 5 of this Traefik configuration
+# workshop: https://youtu.be/CL5Cxxz-yHo
+apiVersion: helm.cattle.io/v1
+kind: HelmChartConfig
+metadata:
+  name: traefik
+  namespace: kube-system
+spec:
+  valuesContent: |-
+    logs:
+      general:
+        level: INFO
+      access:
+        enabled: true
+        format: json
+    additionalArguments:
+      - "--certificatesresolvers.le-staging.acme.tlschallenge=true"
+      - "--certificatesresolvers.le-staging.acme.email=zellyn@gmail.com"
+      - "--certificatesresolvers.le-staging.acme.storage=/data/acme.json"
+      - "--certificatesresolvers.le-staging.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+      - "--certificatesresolvers.le.acme.tlschallenge=true"
+      - "--certificatesresolvers.le.acme.email=zellyn@gmail.com"
+      - "--certificatesresolvers.le.acme.storage=/data/acme.json"
+    persistence:
+      enabled: true

@@ -1,0 +1,19 @@
+# Web ingress for simpleserver. See https://youtu.be/CL5Cxxz-yHo
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: simpleserver-http
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: web
+spec:
+  rules:
+    - host: greenseptember.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: simpleserver
+                port:
+                  number: 8080

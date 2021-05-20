@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simpleserver
+  labels:
+    app: simpleserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simpleserver
+  template:
+    metadata:
+      labels:
+        app: simpleserver
+    spec:
+      containers:
+      - name: simpleserver
+        image: zellyn/katespi:simpleserver-latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simpleserver
+spec:
+  selector:
+    app: simpleserver
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

@@ -1,0 +1,21 @@
+# Secure ingress for simpleserver. See https://youtu.be/CL5Cxxz-yHo
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: simpleserver-https
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
+    traefik.ingress.kubernetes.io/router.tls.certresolver: le
+spec:
+  rules:
+    - host: greenseptember.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: simpleserver
+                port:
+                  number: 8080

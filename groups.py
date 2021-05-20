@@ -44,8 +44,8 @@ groups = {
                 'domain': 'greenseptember.com',
             },
             'keepalived': {
-                'virtual_ipaddress': '192.168.2.42',
-                'virtual_router_id': 42,
+                'virtual_ipaddress': '192.168.7.42',
+                'virtual_router_id': 43,
             },
         },
         'bundles': [

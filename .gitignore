@@ -1,2 +1,4 @@
 .secrets.cfg
 bundles/k3s/files/k3s
+bin
+simpleserver/bin

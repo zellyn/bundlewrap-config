@@ -22,3 +22,24 @@ bw debug -c 'print(repo.vault.password_for("foobarbaz"))'
 Copy the cluster, context, and user from `/etc/rancher/k3s/k3s.yaml` on the
 control-plane server into the relevant sections of `~/.kube/config`, renaming
 `default` to `katespi` (or whatever you want) everywhere.
+
+## How my cluster is set up with keepalived, etc.
+
+# Notes as I go
+
+- simpleserver/build.sh will build a hello-world http server on port 8080 for arm64, putting it in bin/simpleserver
+- how to build an arm64 docker image?
+  - build it `FROM scratch`… why not - it doesn't do anything yet, and we can
+    use the [golang-docker-scratch
+    recipe](https://github.com/jeremyhuiskamp/golang-docker-scratch) later if we
+    need tzdata.
+- how to let the k8s cluster find it?
+  - use docker hub for now:
+
+    ```
+    docker build -t simpleserver .
+    docker image tag simpleserver:latest zellyn/katespi:simpleserver-latest
+    docker push zellyn/katespi:simpleserver-latest
+    ```
+  - maybe set up a private registry on the cluster in the future?
+

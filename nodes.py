@@ -2,6 +2,7 @@ nodes = {
     'katespi1': {
         'hostname': 'ubuntu@100.89.32.19',
         'groups': {'katespi', 'k3s'},
+        'bundles': {'k3sconfig'},
         'metadata': {
             'k3s': {
                 'server': True,
