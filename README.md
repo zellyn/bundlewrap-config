@@ -43,3 +43,7 @@ control-plane server into the relevant sections of `~/.kube/config`, renaming
     ```
   - maybe set up a private registry on the cluster in the future?
 
+
+# TODOs
+
+- [ ] Add `libjson-any-perl` apt module to ddclient bundle

@@ -5,6 +5,7 @@ metadata:
   name: simpleserver-http
   annotations:
     traefik.ingress.kubernetes.io/router.entrypoints: web
+    traefik.ingress.kubernetes.io/router.middlewares: default-redirectscheme@kubernetescrd
 spec:
   rules:
     - host: greenseptember.com

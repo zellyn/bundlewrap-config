@@ -34,14 +34,16 @@ groups = {
                     'tailscale': [
                         '# Managed by bundlewrap',
                         '# Tailscale packages for ubuntu groovy',
-                        'deb https://pkgs.tailscale.com/stable/ubuntu groovy main',
+                        'deb https://pkgs.tailscale.com/stable/ubuntu impish main',
                     ],
                 },
             },
             'ddclient': {
-                'login': 'vO5JlDJI7xNaixYL',
-                'password': 'encrypt$gAAAAABgJuX3t4fsJpaU52il8Gye8hMSdzKs82I811q10iirsNVOfpCJ-AHG1H4JfgQzGkczX87zXY4c1swtkUBH4NBPHf_Xd6UIIz7QyIYIjEHvQh4GaA4=',
-                'domain': 'greenseptember.com',
+                'login': 'zellyn@gmail.com',
+                'protocol': 'cloudflare',
+                'password': 'encrypt$gAAAAABiJ2G5Lis8zzE3aY19jk0A6ys64ZAIbFVYXgaIV7e848QeZ0nPlryFV2Vmzwqt4hdCaLznKyIwJvyD-AZoTLeWEgfX13smrQgWOA-5K7jlvhaphi5TP--CGbhTU4GDGSLQZmGC',
+                'zone': 'greenseptember.com',
+                'records': 'greenseptember.com',
             },
             'keepalived': {
                 'virtual_ipaddress': '192.168.7.42',
@@ -52,6 +54,9 @@ groups = {
             'keepalived',
             'ddclient',
         ],
+    },
+    'ubuntu': {
+        'os': 'ubuntu',
     },
     'raspi': {
         'os': 'raspbian',

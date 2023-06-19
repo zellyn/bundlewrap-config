@@ -24,4 +24,11 @@ files = {
             'svc_systemd:ddclient.service:restart',
         ],
     },
+    '/etc/default/ddclient': {
+        'source': 'default-ddclient',
+        'mode': '0644',
+        'triggers': [
+            'svc_systemd:ddclient.service:restart',
+        ],
+    },
 }
