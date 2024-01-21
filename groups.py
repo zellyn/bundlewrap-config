@@ -29,15 +29,6 @@ groups = {
     'katespi': {
         'os': 'ubuntu',
         'metadata': {
-            'apt': {
-                'repos': {
-                    'tailscale': [
-                        '# Managed by bundlewrap',
-                        '# Tailscale packages for ubuntu groovy',
-                        'deb https://pkgs.tailscale.com/stable/ubuntu impish main',
-                    ],
-                },
-            },
             'ddclient': {
                 'login': 'zellyn@gmail.com',
                 'protocol': 'cloudflare',
@@ -60,16 +51,5 @@ groups = {
     },
     'raspi': {
         'os': 'raspbian',
-        'metadata': {
-            'apt': {
-                'repos': {
-                    'tailscale': [
-                        '# Managed by bundlewrap',
-                        '# Tailscale packages for raspbian buster',
-                        'deb https://pkgs.tailscale.com/stable/raspbian buster main',
-                    ],
-                },
-            },
-        },
     },
 }

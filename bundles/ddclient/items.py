@@ -4,7 +4,6 @@ pkg_apt = {
             'start_service': False,
         },
     },
-    'libio-socket-ssl-perl': {},
 }
 
 svc_systemd = {

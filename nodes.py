@@ -1,6 +1,6 @@
 nodes = {
     'katespi1': {
-        'hostname': 'ubuntu@100.89.32.19',
+        'hostname': 'ubuntu@100.64.111.50',
         'groups': {'katespi', 'k3s'},
         'bundles': {'k3sconfig'},
         'metadata': {
@@ -13,15 +13,15 @@ nodes = {
         },
     },
     'katespi2': {
-        'hostname': 'ubuntu@100.113.249.70',
+        'hostname': 'ubuntu@100.125.197.24',
         'groups': {'katespi', 'k3s'},
     },
     'katespi3': {
-        'hostname': 'ubuntu@100.88.221.38',
+        'hostname': 'ubuntu@100.109.141.36',
         'groups': {'katespi', 'k3s'},
     },
     'katespi4': {
-        'hostname': 'ubuntu@100.109.4.116',
+        'hostname': 'ubuntu@100.100.221.82',
         'groups': {'katespi', 'k3s'},
     },
     'pizero': {
@@ -29,39 +29,20 @@ nodes = {
         'groups': {'raspi'},
     },
     'casepi': {
-        'hostname': 'ubuntu@100.112.123.101',
+        'hostname': 'ubuntu@100.106.232.102',
         'groups': {'ubuntu'},
         'bundles': [
             'ddclient',
         ],
-        'metadata': {
-            'apt': {
-                'repos': {
-                    'tailscale': [
-                        '# Managed by bundlewrap',
-                        '# Tailscale packages for ubuntu impish',
-                        'deb https://pkgs.tailscale.com/stable/ubuntu impish main',
-                    ],
-                },
-            },
-        },
     },
     'lenovo': {
-        'hostname': 'zellyn@lenovo',
+        'hostname': '100.76.94.91',
+        'username': 'zellyn',
         'groups': {'ubuntu'},
         'bundles': [
-            'ddclient',
+#            'ddclient',
         ],
         'metadata': {
-            'apt': {
-                'repos': {
-                    'tailscale': [
-                        '# Managed by bundlewrap',
-                        '# Tailscale packages for ubuntu focal',
-                        'deb [signed-by=/usr/share/keyrings/tailscale-archive-keyring.gpg] https://pkgs.tailscale.com/stable/ubuntu focal main'
-                    ],
-                },
-            },
             'ddclient': {
                 'login': 'zellyn@gmail.com',
                 'protocol': 'cloudflare',
