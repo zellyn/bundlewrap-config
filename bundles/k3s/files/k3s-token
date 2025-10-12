@@ -1,0 +1,1 @@
+${node.metadata.get('k3s/k3s_token', repo.vault.password_for("k3s"))}

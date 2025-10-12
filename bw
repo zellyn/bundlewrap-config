@@ -1,0 +1,13 @@
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "bundlewrap==4.23.1",
+# ]
+# ///
+
+import sys
+from bundlewrap.cmdline import main
+
+if __name__ == "__main__":
+    sys.exit(main())

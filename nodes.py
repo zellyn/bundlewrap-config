@@ -1,6 +1,6 @@
 nodes = {
     'katespi1': {
-        'hostname': 'ubuntu@100.64.111.50',
+        'hostname': 'ubuntu@katespi1',
         'groups': {'katespi', 'k3s'},
         'bundles': {'k3sconfig'},
         'metadata': {
@@ -13,15 +13,15 @@ nodes = {
         },
     },
     'katespi2': {
-        'hostname': 'ubuntu@100.125.197.24',
+        'hostname': 'ubuntu@katespi2',
         'groups': {'katespi', 'k3s'},
     },
     'katespi3': {
-        'hostname': 'ubuntu@100.109.141.36',
+        'hostname': 'ubuntu@katespi3',
         'groups': {'katespi', 'k3s'},
     },
     'katespi4': {
-        'hostname': 'ubuntu@100.100.221.82',
+        'hostname': 'ubuntu@katespi4',
         'groups': {'katespi', 'k3s'},
     },
     'pizero': {
@@ -31,22 +31,20 @@ nodes = {
     'casepi': {
         'hostname': 'ubuntu@100.106.232.102',
         'groups': {'ubuntu'},
-        'bundles': [
-            'ddclient',
-        ],
     },
     'lenovo': {
         'hostname': '100.76.94.91',
         'username': 'zellyn',
         'groups': {'ubuntu'},
         'bundles': [
-#            'ddclient',
+            'ddclient',
+            'caddy2',
         ],
         'metadata': {
             'ddclient': {
                 'login': 'zellyn@gmail.com',
                 'protocol': 'cloudflare',
-                'password': 'encrypt$gAAAAABiJ2G5Lis8zzE3aY19jk0A6ys64ZAIbFVYXgaIV7e848QeZ0nPlryFV2Vmzwqt4hdCaLznKyIwJvyD-AZoTLeWEgfX13smrQgWOA-5K7jlvhaphi5TP--CGbhTU4GDGSLQZmGC',
+                'password': 'encrypt$gAAAAABo6sk_Vt16GqniEc79YjDV8t_vHwJjRTPK4W1Z2hP0kWa3Frav15kszt3i3y8eV0VGDBPXlivgWhFZQQ-EXaMMV9ZyQZViMZUOHf2fxoRcd3fGrCbYBpQ2RNaXq-usR3BBdyAg',
                 'zone': 'greenseptember.com',
                 'records': 'minecraft.greenseptember.com',
             },

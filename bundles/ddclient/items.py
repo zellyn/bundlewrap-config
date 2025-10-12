@@ -17,7 +17,7 @@ svc_systemd = {
 
 files = {
     '/etc/ddclient.conf': {
-        'mode': '0644',
+        'mode': '0600',
         'content_type': 'mako',
         'triggers': [
             'svc_systemd:ddclient.service:restart',

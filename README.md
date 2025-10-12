@@ -7,6 +7,28 @@ I have four Raspberry Pi 4s for a Kubernetes cluster, bought with a work-provide
 
 The notes we're taking as we configure Raspberry Pi Kubernetes clusters are [here](https://docs.google.com/document/d/12TT49VgyPRSH7F4b_oC5rOv1Ag7RPxmSNAWbJjf3RF4).
 
+## Fresh Ubuntu Image Setup
+
+When flashing a fresh Ubuntu image for Raspberry Pi, edit `/boot/firmware/user-data` before first boot to include:
+
+```yaml
+#cloud-config
+
+# Add SSH key and set up passwordless sudo
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: sudo
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJrUtjuKhVHDDjymgptROisv58VgejlcRPkW4SNqrO83 zellyn@lenovo-server
+
+# Optional: Set hostname (change for each Pi)
+# hostname: katespi1
+```
+
+This ensures the Pi boots ready for bundlewrap management without manual intervention.
+
 # Miscellaneous notes
 
 ### Dumping file contents and other general debugging

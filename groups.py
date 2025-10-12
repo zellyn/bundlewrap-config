@@ -20,6 +20,7 @@ groups = {
         'metadata': {
             'k3s': {
                 'server': False,
+                'version': 'v1.31.4+k3s1',  # Default version for all k3s nodes (latest stable)
             }
         },
         'bundles': [
@@ -29,13 +30,6 @@ groups = {
     'katespi': {
         'os': 'ubuntu',
         'metadata': {
-            'ddclient': {
-                'login': 'zellyn@gmail.com',
-                'protocol': 'cloudflare',
-                'password': 'encrypt$gAAAAABiJ2G5Lis8zzE3aY19jk0A6ys64ZAIbFVYXgaIV7e848QeZ0nPlryFV2Vmzwqt4hdCaLznKyIwJvyD-AZoTLeWEgfX13smrQgWOA-5K7jlvhaphi5TP--CGbhTU4GDGSLQZmGC',
-                'zone': 'greenseptember.com',
-                'records': 'greenseptember.com',
-            },
             'keepalived': {
                 'virtual_ipaddress': '192.168.7.42',
                 'virtual_router_id': 43,
@@ -43,7 +37,6 @@ groups = {
         },
         'bundles': [
             'keepalived',
-            'ddclient',
         ],
     },
     'ubuntu': {
