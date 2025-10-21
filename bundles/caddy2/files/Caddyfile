@@ -1,0 +1,11 @@
+# Managed by bundlewrap
+
+% for site_name, site_config in node.metadata.get('caddy2', {}).get('sites', {}).items():
+${site_config['domain']} {
+% if 'email' in site_config:
+    tls ${site_config['email']}
+% endif
+    reverse_proxy ${site_config['proxy_to']}
+}
+
+% endfor

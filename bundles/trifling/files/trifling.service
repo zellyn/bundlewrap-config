@@ -1,0 +1,17 @@
+# Managed by bundlewrap
+[Unit]
+Description=Trifling Web Application
+After=network.target
+
+[Service]
+Type=simple
+User=trifling
+Group=trifling
+WorkingDirectory=/opt/trifling
+ExecStart=/opt/trifling/trifling
+Restart=always
+RestartSec=10
+EnvironmentFile=/etc/default/trifling
+
+[Install]
+WantedBy=multi-user.target
