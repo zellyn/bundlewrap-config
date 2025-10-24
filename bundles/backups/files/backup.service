@@ -1,0 +1,15 @@
+# Managed by bundlewrap
+[Unit]
+Description=Weekly backup to external disk
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/backup.sh
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=backup
+
+# Security settings
+PrivateTmp=yes
+NoNewPrivileges=yes

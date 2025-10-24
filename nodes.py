@@ -37,12 +37,19 @@ nodes = {
         'username': 'zellyn',
         'groups': {'ubuntu'},
         'bundles': [
+            'backups',
             'ddclient',
             'caddy2',
             'systemd',
             'trifling',
         ],
         'metadata': {
+            'backups': {
+                'external_uuid': 'c690eaa6-a19e-43d5-886f-c468a738ddc9',
+                'external_mount': '/mnt/external',
+                'minecraft_source': '/home/zellyn/minecraftbe/survivalone/backups',
+                'trifling_source': '/opt/trifling/data',
+            },
             'ddclient': {
                 'login': 'token',
                 'protocol': 'cloudflare',

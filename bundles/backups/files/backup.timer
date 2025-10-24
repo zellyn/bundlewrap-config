@@ -1,0 +1,13 @@
+# Managed by bundlewrap
+[Unit]
+Description=Weekly backup timer
+Requires=backup.service
+
+[Timer]
+# Run every Monday at 00:00 (midnight Sunday/Monday)
+OnCalendar=Mon *-*-* 00:00:00
+# If system was off, run 1 hour after boot
+Persistent=true
+
+[Install]
+WantedBy=timers.target
