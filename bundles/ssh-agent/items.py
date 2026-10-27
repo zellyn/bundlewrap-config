@@ -6,7 +6,13 @@ files = {
         'mode': '0644',
     },
     '/etc/profile.d/ssh-agent.sh': {
-        'content': '# Managed by bundlewrap\nexport SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"\n',
+        # Don't clobber a forwarded agent (ssh -A): only fall back to the local one
+        'content': (
+            '# Managed by bundlewrap\n'
+            'if [ -z "$SSH_AUTH_SOCK" ]; then\n'
+            '    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"\n'
+            'fi\n'
+        ),
         'mode': '0644',
     },
     '/etc/ssh/ssh_config.d/50-add-keys-to-agent.conf': {

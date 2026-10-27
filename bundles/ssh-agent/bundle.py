@@ -7,6 +7,9 @@ for login shells, and sets AddKeysToAgent so a key's passphrase is only typed
 once per boot. The fixed socket path keeps working inside long-lived tmux
 sessions.
 
+A forwarded agent (ssh -A) takes precedence: SSH_AUTH_SOCK is only set when
+sshd hasn't already set it.
+
 Lingering is enabled for the listed users so their agent (and loaded keys)
 survives between logins.
 
