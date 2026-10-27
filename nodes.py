@@ -40,6 +40,7 @@ nodes = {
             'backups',
             'ddclient',
             'caddy2',
+            'ssh-agent',
             'systemd',
             'trifling',
         ],
