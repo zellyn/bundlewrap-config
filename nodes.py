@@ -76,7 +76,7 @@ nodes = {
                 },
             },
             'trifling': {
-                'git_sha': 'f0e3d8ae9bbf51de3506ae9b2a59bb279175925c',
+                'git_sha': '3d06fe958d22b675bb4e3dcd9ef4eb0638fee678',
                 'google_client_id': 'encrypt$gAAAAABo9v1JCr5PW6Ur7lGMxlwUhzqDdblmKXH9bj89pj1Bz10wLjbVjbS6d125fRFvSnP6Qd55oxADv37xD5QnamVqJdLqeCSg4z5lGkfDEHctUzgORrFiBKKp4fHhaXQsGOdQzeZCPPza2D0h3Y50WTCiMsb36mY5mEaSa2E17l6pIirijMA=',
                 'google_client_secret': 'encrypt$gAAAAABo9v0i1Or6_mor0ZcIiaoeXp-JsRAH_6G8li5xR4yHQVibiEukYIyiuXI6e-C29y2liHxumNiTg_-mvM5C2LmU-d7r50SLm51ClQnl3JIHkigto7lSquGa0ywwZQec80Fb6-UT',
                 'oauth_redirect_url': 'https://trifling.org/auth/callback',
